@@ -1,0 +1,42 @@
+<!doctype html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>AnimeJS Demo</title>
+	<link rel="stylesheet" href="test.css">
+</head>
+
+<body>
+	<div class="main">
+		<div class="b_holder">
+			<button id="1" class="h_ico">Click Me 1</button>
+			<button id="2" class="h_ico">Click Me 2</button>
+			<button id="3" class="h_ico">Click Me 3</button>
+		</div>
+		
+		<div class="g_holder">
+			<div id="top" class="dot"></div>
+			<div id="bot" class="dot"></div>
+			<div id="lef" class="dot"></div>
+			<div id="rig" class="dot"></div>
+		</div>
+	</div>
+	
+	
+	<script src="anime.min.js"></script>
+	<!-- <script src="test.js"></script> -->
+	
+	<script>
+		//function do_animation() {
+			var an = anime({
+				targets: document.getElementById('top'),
+				translateY: 200,
+				autoplay: false
+			});
+	//	}
+		
+		
+		//document.getElementById('1').onclick = do_animation();
+		document.getElementById('1').onclick = an.restart;
+	</script>
+</body>
