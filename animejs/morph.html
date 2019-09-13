@@ -9,7 +9,8 @@
           <polygon points="70 34.86 101.727 57.911 89.609 95.209 50.391 95.209 38.273 57.911"></polygon>
           <polygon points="70 50.898 84.864 61.697 79.186 79.171 60.814 79.171 55.136 61.697"></polygon>
         </g>
-        <polygon class="polymorph" stroke-width="1" stroke="currentColor" points="70 18 119.455 53.931 100.565 112.069 39.435 112.069 20.545 53.931"></polygon>
+      
+		<polygon class="polymorph" stroke-width="1" stroke="currentColor" points="70 50.898 84.864 61.697 79.186 79.171 60.814 79.171 55.136 61.697"></polygon>
       </g>
     </svg>
   </div>
@@ -31,13 +32,13 @@
 	<script>
 // var morphing = //function() {
 /*DEMO*/
- var list1 = ['70 18 119.455 53.931 100.565 112.069 39.435 112.069 20.545 53.931'];
+ var list1 = ['70 50.898 84.864 61.697 79.186 79.171 60.814 79.171 55.136 61.697'];
   var list2 = ['70 57 136.574 54.369 89.145 100.631 28.855 132.631 38.426 64.369'];
  
  var animation1 = anime({
   targets: '.morphing-demo .polymorph',
   points: [
-    { value: list1 },
+    //{ value: list1 },
     { value: list2 }
 
   ],
@@ -49,7 +50,7 @@
  var animation2 = anime({
   targets: '.morphing-demo .polymorph',
   points: [
-	{ value: '70 57 136.574 54.369 89.145 100.631 28.855 132.631 38.426 64.369' },
+	//{ value: '70 50.898 84.864 61.697 79.186 79.171 60.814 79.171 55.136 61.697' },
 	{ value: '70 24 119.574 60.369 100.145 117.631 50.855 101.631 3.426 54.369' }
     
   ],
@@ -61,7 +62,7 @@
  var animation3 = anime({
   targets: '.morphing-demo .polymorph',
   points: [
-    { value: '70 24 119.574 60.369 100.145 117.631 50.855 101.631 3.426 54.369' },
+   // { value: '70 50.898 84.864 61.697 79.186 79.171 60.814 79.171 55.136 61.697' },
 	{ value: '70 18 119.455 53.931 100.565 112.069 39.435 112.069 20.545 53.931' }
   ],
   easing: 'easeOutQuad',
@@ -70,10 +71,36 @@
 });
 /*DEMO*/
 //}
-//function();
+async function tester1(){
+	//animation1.play();
+	animation12.play();
+	
+	//sleep(2005);
+	
+	
+	//document.getElementsByClassName("polymorph")[0].setAttribute("points", "70 57 136.574 54.369 89.145 100.631 28.855 132.631 38.426 64.368");
+	//console.log(document.getElementsByClassName("polymorph")[0].getAttribute("points"));
+}
 
-document.querySelector('.cycle1').onclick = animation1.play;
-document.querySelector('.cycle2').onclick = animation2.play;
+var amimation12 = anime.set('.morphing-demo .polymorph ', {
+  
+	points: [
+		{ value: '70 57 136.574 54.369 89.145 100.631 28.855 132.631 38.426 64.368' }
+	],
+  //translateX: 10,
+  //rotate: 45,
+  //autoplay: false
+});
+
+function tester2(){
+	//animation2.play();
+	document.getElementsByClassName("polymorph")[0].setAttribute("points", "70 24 119.574 60.369 100.145 117.631 50.855 101.631 3.426 54.369");
+}
+
+
+
+document.querySelector('.cycle1').onclick = tester1;
+document.querySelector('.cycle2').onclick = tester2;
 document.querySelector('.cycle3').onclick = animation3.play;
 	</script>
 </html>
