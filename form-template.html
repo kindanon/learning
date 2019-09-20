@@ -1,0 +1,106 @@
+<!DOCTYPE HTML>
+<head>
+<title>Create Account</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<!-- PAGE JS STARTS HERE -->
+<script>
+var form-info = $('form').seralizeArray();
+console.log(form-info);
+</script>
+<!-- PAGE JS ENDS HERE -->
+
+<!-- PAGE CSS STARTS HERE -->
+<style>
+.createAccount-form {
+	text-align: center;
+	margin: 0 auto;
+	width: 100%;}
+.form-row {display: block;}
+.form-input {
+	display: inline-block;
+	text-align: left;
+	margin: 0 auto;
+	padding: .5rem 1rem .5rem 1rem;}
+textarea {
+	padding: 3px 3px 3px 3px;
+	width: 24.5rem;
+	height: 6rem;}
+button {
+	padding: .25rem 1rem .25rem 1rem;
+	background-color: #004a87;
+	color: white;
+	border: none;
+	letter-spacing: .5px;}
+input {	height: 1.5rem; font-size: 24px;}
+label { display: block; padding: 0rem 0 .5rem 0;}
+</style>
+<!-- PAGE CSS ENDS HERE -->
+
+</head>
+	<!-- CODE STARTS HERE -->
+	<form class="createAccount-form" name="createAccount" method="post">
+
+		<h1>Create Account</h1>
+
+		<div class="form-row">
+			<div class="form-input">
+				<label for="fname">First Name:</label> <input id="fname"
+					type="text" style="font-size: 14px; font-style: normal;"
+					disabled="disabled" />
+			</div>
+			<div class="form-input">
+				<label for="lname">Last Name:</label> <input id="lname"
+					type="text" style="font-size: 14px; font-style: normal;"
+					disabled="disabled" />
+			</div>
+		</div>
+
+		<div class="form-row">
+			<div class="form-input">
+				<label for="email">Email:</label> <input id="email"
+					type="text" autofocus="autofocus"
+					style="font-size: 14px; font-style: normal;" required="required" />
+			</div>
+
+			<div class="form-input">
+				<label for="mphone">Mobile Phone:</label> <input
+					id="mphone" type="text"
+					style="font-size: 14px; font-style: normal;" required="required" />
+			</div>
+		</div>
+		<div class="form-row">
+			<div class="form-input">
+				<label for="reason">Business reason for CAM access:</label>
+				<textarea id="reason" style="font-size: 14px; font-style: normal;"
+					required="required"></textarea>
+
+			</div>
+		</div>
+
+		<div class="form-row">
+			<div class="form-input">
+				<label for="tandc">Terms and Conditions:</label>
+				<textarea id="tandc" autofocus="autofocus"
+					style="font-size: 14px; font-style: normal;"></textarea>
+
+			</div>
+		</div>
+
+		<div class="form-row">
+			<div class="form-input" style="width: 25.4rem; padding: 0 0 0 0;">
+				<input id="tandc-check" type="checkbox"
+					style="font-size: 14px; font-style: normal;" required="required" />
+				By checking this box, you agree to out Account Messages Terms &
+				Conditions
+			</div>
+		</div>
+
+		<div class="form-row">
+			<div class="form-input">
+				<button type="submit" form="createAccount-form" value="submit">Register</button>
+			</div>
+		</div>
+	</form>
+	<!-- CODE ENDS HERE -->
+</body>
+</html>
